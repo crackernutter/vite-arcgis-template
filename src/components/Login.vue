@@ -24,8 +24,8 @@ export default {
     IdentityManager.registerOAuthInfos([info]);
 
     const isAuthorized = computed(() => store.state.authorized);
-    const authorize = (payload) => store.commit("SETAUTH", payload);
-    return { userText, isAuthorized, info, authorize };
+    const setAuth = (payload) => store.commit("SETAUTH", payload);
+    return { userText, isAuthorized, info, setAuth };
   },
   methods: {
     async authorize() {
@@ -38,7 +38,7 @@ export default {
         });
         await appItem.load();
         window.addEventListener("beforeunload", this.logout);
-        this.authorize(true);
+        this.setAuth(true);
       } catch (err) {
         console.log("You do not have permission to resource");
         IdentityManager.destroyCredentials();
@@ -60,7 +60,7 @@ export default {
       IdentityManager.destroyCredentials();
       this.esriId = null;
       this.userText = "Login";
-      this.authorize(false);
+      this.setAuth(false);
     },
     handleLogin() {
       if (!this.esriId) {
