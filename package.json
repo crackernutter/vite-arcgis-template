@@ -1,0 +1,23 @@
+{
+  "name": "vitearcgistemplate",
+  "version": "0.0.1",
+  "description": "A Vite, VueJS 3.x, Vuex, Bulma, and Esri ArcGIS ESM Starter template",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@arcgis/core": "^4.20.2",
+    "bulma": "^0.9.3",
+    "vue": "^3.2.6",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-strip": "^2.1.0",
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vue/compiler-sfc": "^3.2.6",
+    "sass": "^1.38.2",
+    "vite": "^2.5.2"
+  }
+}

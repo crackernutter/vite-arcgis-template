@@ -1,0 +1,4 @@
+VITE_APP_SECRET=arcgisappsecret #registered app for oath in Portal or AGOL for authentication
+VITE_PORTAL_URL=portaloragolurl #Portal URL or AGOL
+VITE_ITEMID=portalitemid #Item ID to which to authorize access
+VITE_URL=urllink
